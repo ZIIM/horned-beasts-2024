@@ -32,7 +32,7 @@ class HornedBeast extends React.Component {
           </div>
           <Card.Img variant="top" onClick={this.handleImageClick} src={this.props.beastDetails.image_url} />
           <Card.Text>{this.props.beastDetails.description}</Card.Text>
-          <Button variant="primary" onClick={this.handleFavoriteClick}></Button>
+          <Button variant="primary" onClick={this.handleFavoriteClick}>❤️</Button>
           {/* <Button onClick={() => setLikes(likes + 1)} variant="primary">:sparkling_heart: Like</Button> */}
         </Card.Body>
       </Card>
