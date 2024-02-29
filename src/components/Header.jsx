@@ -1,12 +1,21 @@
-function Header() {
+import React from 'react';
 
-    return(
-      // JSX goes here, think of this as HTML
+class Header extends React.Component {
+
+  // this is how we pass data to components (i.e. props)
+  // We only need to use constructor and super when we want to pass data through
+
+  constructor(props) {
+    super(props);
+  }
+
+  render () {
+    return (
       <header>
-        <h1>Horned Beasts</h1>
+        <h1>Horned Beast</h1>
       </header>
     )
   }
-  
-  // every component should be exported from the file
-  export default Header;
+}
+
+export default Header;
