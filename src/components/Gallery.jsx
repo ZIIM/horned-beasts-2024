@@ -10,8 +10,8 @@ class Gallery extends React.Component {
   // this is how we pass data to components (i.e. props)
   // We only need to use constructor and super when we want to pass data through
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
   }
 
   render () {
@@ -22,9 +22,11 @@ class Gallery extends React.Component {
           {beastDataValues.map((beast, index) => (
             <Col key={index}>
               <HornedBeast
-                title={beast.title}
-                imageURL={beast.image_url}
-                description={beast.description}
+                specifyBeast={this.props.specifyBeast}
+                beastDetails={beast}
+                // title={beast.title}
+                // imageURL={beast.image_url}
+                // description={beast.description}
               />
             </Col>
           ))}
