@@ -10,9 +10,14 @@ class HornedBeast extends React.Component {
     };
   }
 
-  handleClick = () => {
+  handleFavoriteClick = () => {
     this.setState({ timesFavorited: this.state.timesFavorited + 1 });
-  };
+  }
+
+  handleImageClick = () => {
+    console.log('card clicked');
+    this.props.specifyBeast(this.props.beastDetails);
+  } 
 
   render() {
     return (
