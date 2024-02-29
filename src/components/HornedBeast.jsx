@@ -24,19 +24,16 @@ class HornedBeast extends React.Component {
       <Card>
         <Card.Body>
           <div className="headerContainer">
-            <Card.Title>{this.props.title}</Card.Title>
-            <img src="src/assets/heart.png" alt="heart" />
+            <Card.Title>{this.props.beastDetails.title}</Card.Title>
+            {/* HEART IMAGE!!!!!!!!! */}
+            {/* <img src="/src/assets/heart.png" alt="heart"></img>  */}
+            {/* <img src={} alt="heart"></img>  */}
             {this.state.timesFavorited}
           </div>
-          <Card.Img
-            variant="top"
-            onClick={this.handleClick}
-            src={this.props.imageURL}
-          />
-          <Card.Text>{this.props.description}</Card.Text>
-          <Button variant="primary" onClick={this.handleClick}>
-            Favorite Me!
-          </Button>
+          <Card.Img variant="top" onClick={this.handleImageClick} src={this.props.beastDetails.image_url} />
+          <Card.Text>{this.props.beastDetails.description}</Card.Text>
+          <Button variant="primary" onClick={this.handleFavoriteClick}></Button>
+          {/* <Button onClick={() => setLikes(likes + 1)} variant="primary">:sparkling_heart: Like</Button> */}
         </Card.Body>
       </Card>
     );
